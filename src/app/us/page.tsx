@@ -1,0 +1,219 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
+import { services } from '@/data/services'
+import { offices } from '@/data/offices'
+import { Code, Wrench, Plug, Palette, CheckCircle, Star, Users, Zap, DollarSign } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'BrightCode US - Software Development in California',
+  description: 'Custom software development, bug fixes, and integrations for US businesses. Based in Long Beach, CA.',
+  openGraph: {
+    title: 'BrightCode US - Software Development in California',
+    description: 'Custom software development, bug fixes, and integrations for US businesses. Based in Long Beach, CA.',
+  },
+}
+
+const trustSignals = [
+  {
+    icon: CheckCircle,
+    title: 'US-Based Team',
+    description: 'Local expertise and understanding of US market requirements.'
+  },
+  {
+    icon: DollarSign,
+    title: 'USD Pricing',
+    description: 'Transparent pricing in US dollars with no hidden fees.'
+  },
+  {
+    icon: Users,
+    title: 'Direct Communication',
+    description: 'Work directly with founders, no account managers.'
+  },
+  {
+    icon: Star,
+    title: 'California Quality',
+    description: 'Silicon Valley standards with Long Beach accessibility.'
+  }
+]
+
+export default function USPage() {
+  return (
+    <div className="min-h-screen">
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="py-20 bg-gradient-to-br from-brand-50 to-blue-50">
+        <div className="container">
+          <div className="max-w-4xl mx-auto text-center">
+            <Badge variant="secondary" className="mb-4">US Office</Badge>
+            <h1 className="text-5xl md:text-6xl font-display font-bold text-gray-900 mb-6">
+              Software development
+              <br />
+              <span className="text-brand-600">for US businesses.</span>
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              Based in Long Beach, CA. We help US startups and growing businesses build, fix, and launch software that works — fast.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" asChild>
+                <Link href="/contact?country=us">Get a Free Consultation</Link>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <Link href="/pricing/us">See US Pricing</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Strip */}
+      <section className="py-8 border-b">
+        <div className="container">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-sm text-muted-foreground">
+              Based in Long Beach, CA • {offices.us.phone} • {offices.us.email}
+            </p>
+            <div className="flex items-center space-x-2">
+              <Badge variant="outline">USD Pricing</Badge>
+              <Badge variant="outline">California</Badge>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">
+              Services for US businesses
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              From startups to enterprises, we deliver software solutions that drive growth.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service) => {
+              let IconComponent = Code
+              if (service.icon === 'Wrench') IconComponent = Wrench
+              if (service.icon === 'Plug') IconComponent = Plug
+              if (service.icon === 'Palette') IconComponent = Palette
+
+              return (
+                <Card key={service.id} className="group hover:shadow-lg transition-all duration-300">
+                  <CardHeader>
+                    <div className="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center mb-4 group-hover:bg-brand-200 transition-colors">
+                      <IconComponent className="w-6 h-6 text-brand-600" />
+                    </div>
+                    <CardTitle className="text-xl">{service.title}</CardTitle>
+                    <CardDescription className="text-base">{service.blurb}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2">
+                      {service.features.slice(0, 3).map((feature, index) => (
+                        <li key={index} className="flex items-center text-sm text-muted-foreground">
+                          <CheckCircle className="w-4 h-4 text-brand-600 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Why BrightCode US Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">
+              Why choose BrightCode US?
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Local expertise with global standards.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {trustSignals.map((signal, index) => {
+              const IconComponent = signal.icon
+              return (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 rounded-full bg-brand-100 flex items-center justify-center mx-auto mb-4">
+                    <IconComponent className="w-8 h-8 text-brand-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{signal.title}</h3>
+                  <p className="text-gray-600">{signal.description}</p>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* US Office Section */}
+      <section className="py-20">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">
+              Our US office
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Located in the heart of Southern California.
+            </p>
+          </div>
+          
+          <div className="max-w-2xl mx-auto">
+            <Card className="p-8">
+              <div className="flex items-start space-x-6">
+                <div className="w-16 h-16 rounded-lg bg-brand-100 flex items-center justify-center">
+                  <span className="text-brand-600 font-bold text-xl">US</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-2">{offices.us.name}</h3>
+                  <p className="text-gray-600 mb-4">{offices.us.address}</p>
+                  <div className="space-y-2 text-sm text-muted-foreground">
+                    <p>Phone: {offices.us.phone}</p>
+                    <p>Email: {offices.us.email}</p>
+                    <p>Timezone: {offices.us.timezone}</p>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-brand-600">
+        <div className="container text-center">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
+            Ready to build something great?
+          </h2>
+          <p className="text-xl text-brand-100 mb-8 max-w-2xl mx-auto">
+            Let's discuss your project and see how we can help your business grow.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" variant="secondary" asChild>
+              <Link href="/contact?country=us">Get Started Today</Link>
+            </Button>
+            <Button size="lg" variant="outline" className="bg-white text-brand-600 hover:bg-gray-100" asChild>
+              <Link href="/pricing/us">View US Pricing</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  )
+} 
