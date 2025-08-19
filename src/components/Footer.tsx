@@ -108,6 +108,14 @@ export function Footer() {
 
         <div className="mt-6 text-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} BrightCode. All rights reserved.</p>
+          <div className="mt-2 flex justify-center space-x-4">
+            <Link href="/privacy" className="hover:text-foreground transition-colors">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="hover:text-foreground transition-colors">
+              Terms of Service
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

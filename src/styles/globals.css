@@ -26,6 +26,18 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 199 89% 48%;
     --radius: 0.5rem;
+    
+    /* Brand colors */
+    --brand-50: 199 89% 95%;
+    --brand-100: 199 89% 90%;
+    --brand-200: 199 89% 80%;
+    --brand-300: 199 89% 70%;
+    --brand-400: 199 89% 60%;
+    --brand-500: 199 89% 50%;
+    --brand-600: 199 89% 48%;
+    --brand-700: 199 89% 40%;
+    --brand-800: 199 89% 30%;
+    --brand-900: 199 89% 20%;
   }
 
   .dark {
@@ -58,6 +70,44 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* Accessibility improvements */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-brand-600 ring-offset-2;
+  }
+  
+  /* Skip link styles */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  
+  /* Focus styles for interactive elements */
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    @apply outline-none ring-2 ring-brand-600 ring-offset-2;
+  }
+  
+  /* Ensure sufficient color contrast */
+  .text-muted-foreground {
+    color: hsl(var(--muted-foreground));
+  }
+  
+  /* Improve link accessibility */
+  a[href^="tel:"]:focus-visible,
+  a[href^="mailto:"]:focus-visible {
+    @apply outline-none ring-2 ring-brand-600 ring-offset-2 rounded;
   }
 }
 

@@ -93,7 +93,7 @@ export default function HomePage() {
                 <Link href="/services#creative">Learn More</Link>
               </Button>
               <Button size="sm" className="bg-purple-600 hover:bg-purple-700" asChild>
-                <Link href="/contact?service=creative">Get Creative Quote</Link>
+                <Link href="/contact?service=creative">Get a Free Consultation</Link>
               </Button>
             </div>
           </div>
@@ -238,7 +238,7 @@ export default function HomePage() {
             Let's discuss your project and see how we can help you succeed.
           </p>
           <Button size="lg" variant="secondary" asChild>
-            <Link href="/contact">Get Started Today</Link>
+            <Link href="/contact">Get a Free Consultation</Link>
           </Button>
         </div>
       </section>

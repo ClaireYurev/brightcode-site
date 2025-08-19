@@ -193,8 +193,8 @@ export default function AboutPage() {
                     <h3 className="text-2xl font-semibold text-gray-900 mb-2">{office.name}</h3>
                     <p className="text-gray-600 mb-4">{office.address}</p>
                     <div className="space-y-2 text-sm text-muted-foreground">
-                      <p>Phone: {office.phone}</p>
-                      <p>Email: {office.email}</p>
+                      <p>Phone: <a href={`tel:${office.phone}`} className="hover:text-foreground transition-colors">{office.phone}</a></p>
+                      <p>Email: <a href={`mailto:${office.email}`} className="hover:text-foreground transition-colors">{office.email}</a></p>
                       <p>Timezone: {office.timezone}</p>
                     </div>
                   </div>
@@ -216,7 +216,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>
-              <Link href="/contact">Get Started</Link>
+              <Link href="/contact">Get a Free Consultation</Link>
             </Button>
             <Button size="lg" variant="outline" className="bg-white text-brand-600 hover:bg-gray-100" asChild>
               <Link href="/services">View Services</Link>

@@ -1,0 +1,15 @@
+# Global owners
+* @ClaireYurev @IvanHandle
+
+# Documentation
+README.md @ClaireYurev @IvanHandle
+docs/ @ClaireYurev @IvanHandle
+
+# Configuration files
+package.json @ClaireYurev @IvanHandle
+next.config.js @ClaireYurev @IvanHandle
+tailwind.config.js @ClaireYurev @IvanHandle
+tsconfig.json @ClaireYurev @IvanHandle
+
+# GitHub workflows
+.github/ @ClaireYurev @IvanHandle 

@@ -15,6 +15,10 @@ out/
 dist/
 build/
 
+# Contentlayer
+.contentlayer/
+.contentlayer/generated/
+
 # OS / Editor
 .DS_Store
 Thumbs.db
@@ -24,3 +28,13 @@ Thumbs.db
 # Env files (keep secrets local!)
 .env
 .env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts

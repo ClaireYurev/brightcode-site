@@ -293,6 +293,18 @@ export default function ContactPage() {
                     />
                   </div>
                   
+                  {/* Honeypot field for spam protection */}
+                  <div className="sr-only">
+                    <label htmlFor="website" className="sr-only">Website</label>
+                    <input
+                      type="text"
+                      id="website"
+                      name="website"
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
+                  </div>
+                  
                   <Button 
                     type="submit" 
                     className="w-full" 

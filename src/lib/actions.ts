@@ -1,6 +1,20 @@
 'use server'
 
 export async function submitContact(formData: FormData) {
+  // Honeypot protection
+  const honeypot = formData.get('website')
+  if (honeypot) {
+    // If honeypot field is filled, it's likely a bot
+    return { success: true } // Pretend success to avoid revealing the honeypot
+  }
+  
+  // Basic rate limiting (in production, use Redis or similar)
+  const clientIP = formData.get('clientIP') as string
+  const timestamp = Date.now()
+  
+  // This would be implemented with proper rate limiting in production
+  // For now, we'll just validate the form data
+  
   // This would be implemented with Resend
   // For now, we'll simulate the email sending
   const name = formData.get('name') as string
@@ -15,6 +29,12 @@ export async function submitContact(formData: FormData) {
   // Validate required fields
   if (!name || !email || !message || !serviceType) {
     return { success: false, error: 'Please fill in all required fields.' }
+  }
+  
+  // Basic email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  if (!emailRegex.test(email)) {
+    return { success: false, error: 'Please enter a valid email address.' }
   }
   
   // Determine subject line based on service type
@@ -37,7 +57,9 @@ export async function submitContact(formData: FormData) {
     serviceType,
     service,
     message,
-    subject
+    subject,
+    timestamp,
+    clientIP
   })
   
   // In production, this would use Resend:

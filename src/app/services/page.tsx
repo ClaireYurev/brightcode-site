@@ -95,7 +95,7 @@ export default function ServicesPage() {
                           <div className="pt-6">
                             <Button asChild className="group">
                               <Link href={`/contact?service=${service.id}`}>
-                                Get a Quote
+                                Get a Free Consultation
                                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                               </Link>
                             </Button>
@@ -140,7 +140,7 @@ export default function ServicesPage() {
                           <div className="pt-6">
                             <Button asChild className="group bg-purple-600 hover:bg-purple-700">
                               <Link href={`/contact?service=creative&type=${service.id}`}>
-                                Get a Quote
+                                Get a Free Consultation
                                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                               </Link>
                             </Button>
