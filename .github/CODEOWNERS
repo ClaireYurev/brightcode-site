@@ -1,15 +1,15 @@
 # Global owners
-* @ClaireYurev @IvanHandle
+* @ClaireYurev @PretzelSummoner
 
 # Documentation
-README.md @ClaireYurev @IvanHandle
-docs/ @ClaireYurev @IvanHandle
+README.md @ClaireYurev @PretzelSummoner
+docs/ @ClaireYurev @PretzelSummoner
 
 # Configuration files
-package.json @ClaireYurev @IvanHandle
-next.config.js @ClaireYurev @IvanHandle
-tailwind.config.js @ClaireYurev @IvanHandle
-tsconfig.json @ClaireYurev @IvanHandle
+package.json @ClaireYurev @PretzelSummoner
+next.config.js @ClaireYurev @PretzelSummoner
+tailwind.config.js @ClaireYurev @PretzelSummoner
+tsconfig.json @ClaireYurev @PretzelSummoner
 
 # GitHub workflows
-.github/ @ClaireYurev @IvanHandle 
+.github/ @ClaireYurev @PretzelSummoner 
