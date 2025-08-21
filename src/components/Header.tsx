@@ -35,9 +35,15 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="inline-flex items-center gap-2" aria-label="BrightCode home">
-          <Image src="/logo.svg" alt="" width={24} height={24} className="text-foreground" />
-          <Image src="/logo-wordmark.svg" alt="BrightCode" width={140} height={24} className="text-foreground" />
+        <Link href="/" className="flex items-center gap-2" aria-label="BrightCode home">
+          <Image
+            src="/logo.svg"
+            alt="BrightCode logo"
+            width={28}
+            height={28}
+            priority
+          />
+          <span className="font-semibold text-lg tracking-tight">BrightCode</span>
         </Link>
 
         {/* Desktop Navigation */}

@@ -1,4 +1,11 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="24" height="24" rx="6" fill="currentColor"/>
-  <path d="M8 6H12C13.1 6 14 6.9 14 8C14 8.6 13.7 9.1 13.3 9.4C13.7 9.7 14 10.2 14 10.8C14 11.9 13.1 12.8 12 12.8H8V6ZM10 8.4V9.6H12C12.3 9.6 12.6 9.3 12.6 9C12.6 8.7 12.3 8.4 12 8.4H10ZM10 10.8V12H12C12.3 12 12.6 11.7 12.6 11.4C12.6 11.1 12.3 10.8 12 10.8H10Z" fill="white"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="BrightCode logo">
+  <!-- Rounded square background -->
+  <rect x="8" y="8" width="80" height="80" rx="20" fill="#0EA5E9"/>
+  <!-- Bold "B", slightly stretched vertically for balance -->
+  <text x="50%" y="52%" text-anchor="middle" dominant-baseline="middle"
+        font-family="Montserrat, Inter, Arial, sans-serif"
+        font-size="52" font-weight="700" fill="white"
+        transform="scale(1,1.05)">
+    B
+  </text>
 </svg> 

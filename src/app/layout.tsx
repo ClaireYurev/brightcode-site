@@ -43,8 +43,8 @@ export const metadata: Metadata = {
       { url: '/logo.svg', type: 'image/svg+xml' },
     ],
     apple: [
-      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
-      { url: '/icon-512.png', sizes: '512x512', type: 'image/png' },
+      { url: '/logo-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/logo-512.png', sizes: '512x512', type: 'image/png' },
     ],
   },
   manifest: '/site.webmanifest',
@@ -90,7 +90,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#0f172a',
+  themeColor: '#0EA5E9',
 }
 
 export default function RootLayout({
@@ -122,7 +122,7 @@ export default function RootLayout({
                   '@type': 'Organization',
                   name: 'BrightCode',
                   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://brightcode.com',
-                  logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://brightcode.com'}/logo-wordmark.svg`,
+                  logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://brightcode.com'}/logo.svg`,
                 },
                 {
                   '@type': 'LocalBusiness',

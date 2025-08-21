@@ -3,23 +3,26 @@
 ## Icons & Favicons
 
 ### Current Status
-- ✅ `logo.svg` - BrightCode icon (24x24)
-- ✅ `logo-wordmark.svg` - BrightCode wordmark (140x24)
-- ✅ `icon-192.png` - App icon 192x192 (placeholder - replace with actual)
-- ✅ `icon-512.png` - App icon 512x512 (placeholder - replace with actual)
+- ✅ `logo.svg` - BrightCode logo (96x96, blue background with white "B")
+- ✅ `logo-32.png` - 32x32 PNG
+- ✅ `logo-64.png` - 64x64 PNG
+- ✅ `logo-128.png` - 128x128 PNG
+- ✅ `logo-256.png` - 256x256 PNG
 - ⚠️ `favicon.ico` - Browser favicon (placeholder - needs replacement)
-- ✅ `site.webmanifest` - PWA manifest
+- ✅ `site.webmanifest` - PWA manifest (updated theme color: #0EA5E9)
 
 ### TODO: Replace Placeholders
-1. **favicon.ico**: Generate a proper 32x32 ICO file from `logo.svg`
-   - Use tools like https://favicon.io or Figma export
-   - Should be the rounded-square "B" monogram
+1. **favicon.ico**: Generate a proper ICO file from `logo.svg`
+   - Use tools like https://favicon.io or ImageMagick
+   - Should be the blue rounded-square with white "B"
+   - Include multiple sizes: 16, 32, 48, 64, 128, 256
    
-2. **icon-192.png** & **icon-512.png**: 
-   - Export `logo.svg` at these resolutions
-   - Use black color (`currentColor = #000000`)
-   - Transparent background
-   - Center the monogram
+2. **PNG logos**: ✅ Already generated and in place
+   - `logo-32.png` - 32x32 resolution
+   - `logo-64.png` - 64x64 resolution  
+   - `logo-128.png` - 128x128 resolution
+   - `logo-256.png` - 256x256 resolution
+   - All maintain the blue background (#0EA5E9) and white "B"
 
 ### Tools for Icon Generation
 - **Online**: https://favicon.io, https://realfavicongenerator.net
