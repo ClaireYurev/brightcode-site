@@ -7,6 +7,7 @@ import { CheckCircle, ArrowRight, Calendar } from 'lucide-react'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { verticals, verticalsMap, type Vertical } from '@/data/verticals'
+import { services } from '@/data/services'
 import { getCalendlyUrl } from '@/lib/region'
 
 interface VerticalPageProps {
@@ -128,6 +129,31 @@ export default function VerticalPage({ params }: VerticalPageProps) {
                 ))}
               </div>
             </div>
+
+            {/* Related Services */}
+            {vertical.relatedServices && vertical.relatedServices.length > 0 && (
+              <div className="mb-16">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  Typical services for this vertical:
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {vertical.relatedServices.map((serviceId) => {
+                    const service = services.find(s => s.id === serviceId)
+                    if (!service) return null
+                    return (
+                      <Link key={serviceId} href="/services">
+                        <Badge 
+                          variant="outline" 
+                          className="text-sm hover:bg-brand-100 transition-colors cursor-pointer"
+                        >
+                          {service.title}
+                        </Badge>
+                      </Link>
+                    )
+                  })}
+                </div>
+              </div>
+            )}
 
             {/* Typical outcomes */}
             <div className="mb-16">

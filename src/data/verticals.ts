@@ -6,6 +6,7 @@ export type Vertical = {
   bullets: string[]
   usCtaHref: string
   caCtaHref: string
+  relatedServices: string[]
   faq?: { q: string; a: string }[]
   og?: { title?: string; description?: string }
 }
@@ -24,6 +25,7 @@ export const verticals: Vertical[] = [
     ],
     usCtaHref: "/contact?vertical=accounting&region=us",
     caCtaHref: "/contact?vertical=accounting&region=ca",
+    relatedServices: ['integrations', 'custom'],
     faq: [
       {
         q: "Do you provide tax advice?",
@@ -52,6 +54,7 @@ export const verticals: Vertical[] = [
     ],
     usCtaHref: "/contact?vertical=ecommerce&region=us",
     caCtaHref: "/contact?vertical=ecommerce&region=ca",
+    relatedServices: ['custom', 'integrations', 'design'],
     faq: [
       {
         q: "Which e-commerce platforms do you work with?",
@@ -80,6 +83,7 @@ export const verticals: Vertical[] = [
     ],
     usCtaHref: "/contact?vertical=privacy&region=us",
     caCtaHref: "/contact?vertical=privacy&region=ca",
+    relatedServices: ['integrations', 'custom'],
     faq: [
       {
         q: "Do you provide legal compliance advice?",
@@ -108,6 +112,7 @@ export const verticals: Vertical[] = [
     ],
     usCtaHref: "/contact?vertical=logistics&region=us",
     caCtaHref: "/contact?vertical=logistics&region=ca",
+    relatedServices: ['custom', 'integrations'],
     faq: [
       {
         q: "Do you work with customs brokers?",
@@ -136,6 +141,7 @@ export const verticals: Vertical[] = [
     ],
     usCtaHref: "/contact?vertical=professional&region=us",
     caCtaHref: "/contact?vertical=professional&region=ca",
+    relatedServices: ['custom', 'design'],
     faq: [
       {
         q: "What types of professional services do you work with?",

@@ -11,7 +11,8 @@ export const services = [
       'API development & integration',
       'Database design & optimization',
       'Cloud deployment & scaling'
-    ]
+    ],
+    relatedVerticals: ['cross-border-ecommerce', 'professional-services', 'logistics-customs']
   },
   { 
     id: 'bugfix', 
@@ -25,7 +26,8 @@ export const services = [
       'Security vulnerability patches',
       'Legacy code modernization',
       'Emergency response'
-    ]
+    ],
+    relatedVerticals: ['cross-border-ecommerce', 'professional-services', 'logistics-customs']
   },
   { 
     id: 'integrations', 
@@ -39,7 +41,8 @@ export const services = [
       'Payment gateway integration',
       'Workflow automation',
       'Data synchronization'
-    ]
+    ],
+    relatedVerticals: ['cross-border-ecommerce', 'privacy-compliance', 'cross-border-accounting-tax']
   },
   { 
     id: 'design', 
@@ -53,7 +56,8 @@ export const services = [
       'Design system creation',
       'User research & testing',
       'Brand consistency'
-    ]
+    ],
+    relatedVerticals: ['professional-services', 'cross-border-ecommerce']
   },
 ];
 

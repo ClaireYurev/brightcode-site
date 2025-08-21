@@ -330,13 +330,13 @@ export default function ContactPage() {
                     <p className="text-sm text-muted-foreground mb-4">Or book a consultation directly:</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <Button variant="outline" size="lg" asChild>
-                        <a href={getCalendlyUrl("us")} target="_blank" rel="noopener noreferrer">
+                        <a href={getCalendlyUrl("us")} target="_blank" rel="noopener noreferrer" aria-label="Book US consultation">
                           <Calendar className="w-4 h-4 mr-2" />
                           Book US consult
                         </a>
                       </Button>
                       <Button variant="outline" size="lg" asChild>
-                        <a href={getCalendlyUrl("ca")} target="_blank" rel="noopener noreferrer">
+                        <a href={getCalendlyUrl("ca")} target="_blank" rel="noopener noreferrer" aria-label="Book Canada consultation">
                           <Calendar className="w-4 h-4 mr-2" />
                           Book Canada consult
                         </a>

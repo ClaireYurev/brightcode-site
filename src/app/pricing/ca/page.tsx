@@ -37,6 +37,9 @@ export default function CAPricingPage() {
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
               Clear, upfront pricing for all our services. No hidden fees, no surprises.
             </p>
+            <p className="text-sm text-muted-foreground mb-8 max-w-2xl mx-auto">
+              Serving both the U.S. and Canada. Looking for solutions by industry? <Link href="/verticals" className="text-brand-600 hover:text-brand-700 underline">See Who We Help</Link>.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
                 <Link href="/contact?country=ca">Get a Custom Quote</Link>

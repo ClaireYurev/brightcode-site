@@ -7,6 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { services, creativeServices } from '@/data/services'
+import { RelatedVerticals } from '@/components/RelatedVerticals'
 import { Code, Wrench, Plug, Palette, Brush, Type, Megaphone, CheckCircle, ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -31,11 +32,11 @@ export default function ServicesPage() {
               Our services
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              From concept to deployment, we handle every aspect of your software project with expertise and care. Plus, we now offer creative services to bring your brand to life.
+              We build practical software—dashboards, APIs, websites—and keep it running with friendly support.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
-                <Link href="/contact">Get a Free Consultation</Link>
+                <Link href="/contact">Book a Free Consultation</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
                 <Link href="/pricing/us">See Pricing</Link>
@@ -95,10 +96,13 @@ export default function ServicesPage() {
                           <div className="pt-6">
                             <Button asChild className="group">
                               <Link href={`/contact?service=${service.id}`}>
-                                Get a Free Consultation
+                                Book a Free Consultation
                                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                               </Link>
                             </Button>
+                            {service.relatedVerticals && (
+                              <RelatedVerticals verticalSlugs={service.relatedVerticals} />
+                            )}
                           </div>
                         </div>
                       </CardContent>
@@ -140,7 +144,7 @@ export default function ServicesPage() {
                           <div className="pt-6">
                             <Button asChild className="group bg-purple-600 hover:bg-purple-700">
                               <Link href={`/contact?service=creative&type=${service.id}`}>
-                                Get a Free Consultation
+                                Book a Free Consultation
                                 <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                               </Link>
                             </Button>
@@ -239,7 +243,7 @@ export default function ServicesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>
-              <Link href="/contact">Get a Free Consultation</Link>
+              <Link href="/contact">Book a Free Consultation</Link>
             </Button>
             <Button size="lg" variant="outline" className="bg-white text-brand-600 hover:bg-gray-100" asChild>
               <Link href="/work">View Our Work</Link>

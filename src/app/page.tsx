@@ -54,16 +54,16 @@ export default function HomePage() {
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-display font-bold text-gray-900 mb-6">
-              Software that ships.
+              Software that works.
               <br />
-              <span className="text-brand-600">Teams that care.</span>
+              <span className="text-brand-600">Partners that care.</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Binational U.S.–Canada development for startups and SMBs. We build, fix, and launch software—fast.
+              We help businesses launch software and creative that move the needle. With teams in the U.S. and Canada, we combine local expertise with cross-border reach.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
-                <Link href="/contact">Get a Free Consultation</Link>
+                <Link href="/contact">Book a Free Consultation</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
                 <Link href="/pricing/us">See Pricing</Link>
@@ -242,7 +242,7 @@ export default function HomePage() {
             Let's discuss your project and see how we can help you succeed.
           </p>
           <Button size="lg" variant="secondary" asChild>
-            <Link href="/contact">Get a Free Consultation</Link>
+            <Link href="/contact">Book a Free Consultation</Link>
           </Button>
         </div>
       </section>

@@ -53,16 +53,16 @@ export default function USPage() {
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="secondary" className="mb-4">US Office</Badge>
             <h1 className="text-5xl md:text-6xl font-display font-bold text-gray-900 mb-6">
-              Software development
+              Software that works.
               <br />
-              <span className="text-brand-600">for US businesses.</span>
+              <span className="text-brand-600">Partners that care.</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Based in Long Beach, CA. We help US startups and growing businesses build, fix, and launch software that works — fast.
+              We help businesses launch software and creative that move the needle. With teams in the U.S. and Canada, we combine local expertise with cross-border reach.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
-                <Link href="/contact?country=us">Get a Free Consultation</Link>
+                <Link href="/contact?country=us" aria-label="Book a Free Consultation (US)">Book a Free Consultation</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
                 <Link href="/pricing/us">See US Pricing</Link>
@@ -208,7 +208,7 @@ export default function USPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="secondary" asChild>
-              <Link href="/contact?country=us">Get Started Today</Link>
+              <Link href="/contact?country=us" aria-label="Book a Free Consultation (US)">Book a Free Consultation</Link>
             </Button>
             <Button size="lg" variant="outline" className="bg-white text-brand-600 hover:bg-gray-100" asChild>
               <Link href="/pricing/us">View US Pricing</Link>
