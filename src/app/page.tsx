@@ -7,6 +7,7 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { WhoWeHelp } from '@/components/WhoWeHelp'
 import { TestimonialsStrip } from '@/components/TestimonialsStrip'
+import { ProofStrip } from '@/components/ProofStrip'
 import { StockImage } from '@/components/StockImage'
 import { services } from '@/data/services'
 import { offices } from '@/data/offices'
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   },
 }
 
-const techStack = ['JavaScript', 'TypeScript', 'React', 'Python', 'Java', 'C#', 'C++', 'Swift', 'Kotlin']
+
 
 const trustSignals = [
   {
@@ -61,14 +62,14 @@ export default function HomePage() {
               <span className="text-brand-600">Teams that care.</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              We help startups and growing businesses build, fix, and launch software that's fast, reliable, and intuitive by design. We also offer creative services for branding and marketing.
+              We help startups and growing businesses launch software faster, fix what's broken, and scale without headaches. We also offer creative services for branding and marketing.
             </p>
             <p className="text-sm text-muted-foreground mb-8">
-              Based in the U.S. and Canada.
+              Based in Los Angeles and Toronto.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
-                <Link href="/contact">Get a Free Consultation</Link>
+                <Link href="/contact">Book a Free 20-Min Strategy Call</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
                 <Link href="/pricing/us">See Pricing</Link>
@@ -84,6 +85,9 @@ export default function HomePage() {
           <StockImage k="hero" width={1200} height={800} priority className="rounded-xl mx-auto" />
         </div>
       </section>
+
+      {/* Proof Strip */}
+      <ProofStrip />
 
       {/* Creative Services Callout */}
       <section className="py-12 bg-purple-50 border-b">
@@ -113,23 +117,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Trust Strip */}
-      <section className="py-8 border-b">
-        <div className="container">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-muted-foreground">
-              Service areas: Greater Los Angeles & Orange County, CA • Greater Toronto Area, ON
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {techStack.map((tech) => (
-                <Badge key={tech} variant="secondary" className="text-xs">
-                  {tech}
-                </Badge>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Services Section */}
       <section className="py-20">
@@ -247,6 +235,23 @@ export default function HomePage() {
       {/* Testimonials Strip */}
       <TestimonialsStrip />
 
+      {/* Lead Magnet Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">
+              Free Guide: 5 Costly Mistakes U.S.–Canada Businesses Make With Software Integrations
+            </h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              Download our checklist to avoid expensive errors and stay compliant.
+            </p>
+            <Button size="lg" asChild>
+              <Link href="/contact?lead=guide">Download Free Guide</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-brand-600">
         <div className="container text-center">
@@ -257,7 +262,7 @@ export default function HomePage() {
             Let's discuss your project and see how we can help you succeed.
           </p>
           <Button size="lg" variant="secondary" asChild>
-            <Link href="/contact">Get a Free Consultation</Link>
+            <Link href="/contact">Book a Free 20-Min Strategy Call</Link>
           </Button>
         </div>
       </section>

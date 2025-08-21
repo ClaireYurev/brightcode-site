@@ -56,7 +56,7 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
-                <Link href="/contact">Get in Touch</Link>
+                <Link href="/contact">Book a Free 20-Min Strategy Call</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
                 <Link href="/work">View Our Work</Link>
@@ -77,12 +77,10 @@ export default function AboutPage() {
                 </h2>
                 <div className="space-y-4 text-lg text-gray-600">
                   <p>
-                    BrightCode was founded by a team of developers who were tired of seeing great ideas fail due to poor execution. 
-                    We started as students, became builders, and now we're founders helping other founders succeed.
+                    BrightCode was started by Claire in Los Angeles and Ivan in Toronto. After years in finance, data engineering, and tech, we saw too many businesses struggle with cross-border operations.
                   </p>
                   <p>
-                    Our journey began in university where we learned that the best software isn't just about writing code—it's about 
-                    understanding problems, designing solutions, and delivering value to users.
+                    We started BrightCode to bring clarity and speed to software projects, with a binational team that understands both U.S. and Canadian challenges.
                   </p>
                   <p>
                     Today, we work with startups and growing businesses across North America, helping them build, fix, and launch 

@@ -15,7 +15,7 @@ export const verticals: Vertical[] = [
   {
     slug: "cross-border-accounting-tax",
     title: "Cross‑Border Accounting & Tax Systems",
-    tagline: "One clear view of U.S. + Canadian finances.",
+    tagline: "Stop losing money to tax errors and duplicate bookkeeping.",
     summary: "We unify QuickBooks/Xero/Stripe data across IRS and CRA reporting, automate FX conversion, and generate binational, tax‑ready reports.",
     bullets: [
       "Sync QuickBooks, Xero, Stripe across entities",
@@ -44,7 +44,7 @@ export const verticals: Vertical[] = [
   {
     slug: "cross-border-ecommerce",
     title: "Cross‑Border E‑Commerce",
-    tagline: "Sell seamlessly in USD and CAD.",
+    tagline: "Simplify currency conversion, tax, and shipping workflows.",
     summary: "Custom Shopify/Stripe/PayPal integrations that handle multi‑currency checkout, tax, and shipping across U.S. & Canada.",
     bullets: [
       "Multi‑currency checkout (USD/CAD)",
@@ -73,7 +73,7 @@ export const verticals: Vertical[] = [
   {
     slug: "privacy-compliance",
     title: "Data Residency & Privacy Compliance",
-    tagline: "Build once, comply in both countries.",
+    tagline: "Reduce risk with U.S./Canadian data-privacy readiness.",
     summary: "Small‑business‑friendly privacy audits and secure data implementations aligned to CCPA/CPRA (U.S.) and PIPEDA (Canada).",
     bullets: [
       "Lightweight privacy audit of your app/workflows",
@@ -102,7 +102,7 @@ export const verticals: Vertical[] = [
   {
     slug: "logistics-customs",
     title: "Logistics, Supply Chain & Customs",
-    tagline: "Lightweight tools that move freight faster.",
+    tagline: "Track shipments and handle customs data without bloated software.",
     summary: "Affordable dashboards/apps for customs brokers and cross‑border trucking—track shipments, streamline entries, integrate CBSA/CBP data.",
     bullets: [
       "Shipment tracking dashboards",
@@ -131,7 +131,7 @@ export const verticals: Vertical[] = [
   {
     slug: "professional-services",
     title: "Professional Services",
-    tagline: "Secure portals for cross‑border clients.",
+    tagline: "Spend less time in spreadsheets, more time with clients.",
     summary: "Client portals, document workflows, and intake automation for law firms, accountants, and immigration consultants.",
     bullets: [
       "Secure client portals w/ file exchange",

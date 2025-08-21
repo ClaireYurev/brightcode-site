@@ -1,15 +1,13 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
-import { Button } from '@/components/ui/button'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy - BrightCode',
-  description: 'Privacy policy for BrightCode website and services.',
+  title: 'Privacy Notice - BrightCode',
+  description: 'Privacy policy and data handling practices for BrightCode.',
   openGraph: {
-    title: 'Privacy Policy - BrightCode',
-    description: 'Privacy policy for BrightCode website and services.',
+    title: 'Privacy Notice - BrightCode',
+    description: 'Privacy policy and data handling practices for BrightCode.',
   },
 }
 
@@ -18,97 +16,57 @@ export default function PrivacyPage() {
     <div className="min-h-screen">
       <Header />
       
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-brand-50 to-blue-50">
-        <div className="container">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-display font-bold text-gray-900 mb-6">
-              Privacy Policy
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              How we collect, use, and protect your information.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" asChild>
-                <Link href="/contact">Get a Free Consultation</Link>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <Link href="/terms">Terms of Service</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <main className="container mx-auto max-w-3xl px-4 py-16">
+        <h1 className="text-4xl font-bold tracking-tight mb-6">Privacy Notice</h1>
+        <p className="text-muted-foreground mb-6">
+          This is a placeholder privacy page for BrightCode. Please replace with your finalized legal
+          privacy policy text before launch.
+        </p>
 
-      {/* Content Section */}
-      <section className="py-20">
-        <div className="container">
-          <div className="max-w-4xl mx-auto prose">
-            <p className="text-sm text-muted-foreground mb-8">
-              Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-            </p>
-            
-            <h2>Information We Collect</h2>
-            <p>
-              We collect information you provide directly to us, such as when you fill out our contact form, 
-              subscribe to our newsletter, or communicate with us. This may include:
-            </p>
-            <ul>
-              <li>Name and contact information (email, phone number)</li>
-              <li>Company information</li>
-              <li>Project details and requirements</li>
-              <li>Communication preferences</li>
-            </ul>
+        <section className="space-y-4 mb-10">
+          <h2 className="text-xl font-semibold">1. Information We Collect</h2>
+          <p>
+            When you request our free guide or book a strategy call, we may collect your name, email address,
+            and other details you provide.
+          </p>
+        </section>
 
-            <h2>How We Use Your Information</h2>
-            <p>We use the information we collect to:</p>
-            <ul>
-              <li>Provide and improve our services</li>
-              <li>Communicate with you about projects and services</li>
-              <li>Send you marketing materials (with your consent)</li>
-              <li>Comply with legal obligations</li>
-            </ul>
+        <section className="space-y-4 mb-10">
+          <h2 className="text-xl font-semibold">2. How We Use Information</h2>
+          <p>
+            We use your information to send the requested guide, follow up on your inquiry, and share occasional
+            BrightCode updates. You can unsubscribe anytime.
+          </p>
+        </section>
 
-            <h2>Information Sharing</h2>
-            <p>
-              We do not sell, trade, or otherwise transfer your personal information to third parties 
-              without your consent, except as described in this policy or as required by law.
-            </p>
+        <section className="space-y-4 mb-10">
+          <h2 className="text-xl font-semibold">3. Data Sharing</h2>
+          <p>
+            We do not sell your data. We may use trusted third-party providers (e.g., email delivery) to
+            process your information securely.
+          </p>
+        </section>
 
-            <h2>Data Security</h2>
-            <p>
-              We implement appropriate security measures to protect your personal information against 
-              unauthorized access, alteration, disclosure, or destruction.
-            </p>
+        <section className="space-y-4 mb-10">
+          <h2 className="text-xl font-semibold">4. Your Rights</h2>
+          <p>
+            You can request access, correction, or deletion of your data by contacting us.
+          </p>
+        </section>
 
-            <h2>Cookies and Tracking</h2>
-            <p>
-              We use cookies and similar technologies to improve your experience on our website, 
-              analyze usage patterns, and provide personalized content.
-            </p>
+        <section className="space-y-4 mb-10">
+          <h2 className="text-xl font-semibold">5. Contact Us</h2>
+          <p>
+            For privacy questions, reach out at <a href="mailto:hello@brightcode.dev" className="underline">hello@brightcode.dev</a>.
+          </p>
+        </section>
 
-            <h2>Your Rights</h2>
-            <p>You have the right to:</p>
-            <ul>
-              <li>Access your personal information</li>
-              <li>Correct inaccurate information</li>
-              <li>Request deletion of your information</li>
-              <li>Opt out of marketing communications</li>
-            </ul>
-
-            <h2>Contact Us</h2>
-            <p>
-              If you have any questions about this privacy policy or our data practices, 
-              please contact us at{' '}
-              <a href="mailto:hello@brightcode.com" className="text-brand-600 hover:text-brand-700">
-                hello@brightcode.com
-              </a>
-            </p>
-          </div>
-        </div>
-      </section>
+        <p className="text-sm text-muted-foreground">
+          Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </p>
+      </main>
 
       <Footer />
     </div>
-  )
+  );
 } 

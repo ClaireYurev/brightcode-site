@@ -3,7 +3,7 @@ export const services = [
     id: 'custom', 
     title: 'Custom Development', 
     blurb: 'Web & mobile apps from MVP to scale.',
-    description: 'We build custom software solutions that grow with your business. From initial concept to production deployment, we handle the full development lifecycle.',
+    description: 'Unify scattered data into clear, actionable dashboards.',
     icon: 'Code',
     features: [
       'Full-stack web applications',
@@ -33,7 +33,7 @@ export const services = [
     id: 'integrations', 
     title: 'Integrations & Automation', 
     blurb: 'Connect your tools, APIs, and cloud.',
-    description: 'Seamlessly connect your existing systems and automate workflows to boost productivity and reduce manual work.',
+    description: 'Automate manual tasks and connect your apps so you can save hours weekly.',
     icon: 'Plug',
     features: [
       'Third-party API integrations',

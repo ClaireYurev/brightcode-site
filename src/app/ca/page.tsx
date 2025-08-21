@@ -59,14 +59,14 @@ export default function CAPage() {
               <span className="text-brand-600">Teams that care.</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              We help startups and growing businesses build, fix, and launch software that's fast, reliable, and intuitive by design. We also offer creative services for branding and marketing.
+              We help startups and growing businesses launch software faster, fix what's broken, and scale without headaches. We also offer creative services for branding and marketing.
             </p>
             <p className="text-sm text-muted-foreground mb-8">
-              Based in the U.S. and Canada.
+              Based in Los Angeles and Toronto.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
-                <Link href="/contact?country=ca" aria-label="Get a Free Consultation (Canada)">Get a Free Consultation</Link>
+                <Link href="/contact?country=ca" aria-label="Book a Free 20-Min Strategy Call (Canada)">Book a Free 20-Min Strategy Call</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
                 <Link href="/pricing/ca">See Canadian Pricing</Link>

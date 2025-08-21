@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -34,11 +35,9 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2">
-          <div className="h-8 w-8 rounded-lg bg-brand-600 flex items-center justify-center">
-            <span className="text-white font-bold text-sm">B</span>
-          </div>
-          <span className="font-display font-bold text-xl">BrightCode</span>
+        <Link href="/" className="inline-flex items-center gap-2" aria-label="BrightCode home">
+          <Image src="/logo.svg" alt="" width={24} height={24} className="text-foreground" />
+          <Image src="/logo-wordmark.svg" alt="BrightCode" width={140} height={24} className="text-foreground" />
         </Link>
 
         {/* Desktop Navigation */}

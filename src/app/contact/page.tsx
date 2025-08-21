@@ -130,7 +130,7 @@ export default function ContactPage() {
               <CardHeader>
                 <CardTitle className="text-3xl">Get in touch</CardTitle>
                 <CardDescription>
-                  Fill out the form below and we'll get back to you as soon as possible.
+                  We typically reply within 24 hours. Book a call or request an estimate.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -340,15 +340,15 @@ export default function ContactPage() {
                     <p className="text-sm text-muted-foreground mb-4">Or book a consultation directly:</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <Button variant="outline" size="lg" asChild>
-                        <a href={getCalendlyUrl("us")} target="_blank" rel="noopener noreferrer" aria-label="Get US consultation">
+                        <a href={getCalendlyUrl("us")} target="_blank" rel="noopener noreferrer" aria-label="Book a Free 20-Min Strategy Call (US)">
                           <Calendar className="w-4 h-4 mr-2" />
-                          Get US consult
+                          Book US Strategy Call
                         </a>
                       </Button>
                       <Button variant="outline" size="lg" asChild>
-                        <a href={getCalendlyUrl("ca")} target="_blank" rel="noopener noreferrer" aria-label="Get Canada consultation">
+                        <a href={getCalendlyUrl("ca")} target="_blank" rel="noopener noreferrer" aria-label="Book a Free 20-Min Strategy Call (Canada)">
                           <Calendar className="w-4 h-4 mr-2" />
-                          Get Canada consult
+                          Book Canada Strategy Call
                         </a>
                       </Button>
                     </div>
@@ -383,6 +383,49 @@ export default function ContactPage() {
                 <InlineMap q={o.mapQuery} title={o.label} />
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Reinforcement */}
+      <section className="py-16 border-t">
+        <div className="container">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-display font-bold text-gray-900 mb-4">
+              Trusted by businesses across North America
+            </h3>
+            <p className="text-gray-600 mb-8">
+              We work with the technologies and platforms you rely on.
+            </p>
+          </div>
+          
+          {/* Google Review Placeholder */}
+          <div className="bg-white border rounded-lg p-6 mb-8 max-w-2xl mx-auto">
+            <div className="flex items-center mb-4">
+              <div className="flex text-yellow-400">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="text-2xl">★</span>
+                ))}
+              </div>
+              <span className="ml-2 text-sm text-gray-600">Google Reviews</span>
+            </div>
+            <p className="text-gray-700 italic mb-2">
+              "BrightCode delivered exactly what we needed, on time and on budget. Highly recommend!"
+            </p>
+            <p className="text-sm text-gray-600">— TODO: Add real Google review</p>
+          </div>
+          
+          {/* Trust Badges */}
+          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
+            <div className="w-16 h-8 bg-gray-200 rounded flex items-center justify-center text-xs text-gray-600">
+              Stripe
+            </div>
+            <div className="w-16 h-8 bg-gray-200 rounded flex items-center justify-center text-xs text-gray-600">
+              Shopify
+            </div>
+            <div className="w-16 h-8 bg-gray-200 rounded flex items-center justify-center text-xs text-gray-600">
+              AWS
+            </div>
           </div>
         </div>
       </section>

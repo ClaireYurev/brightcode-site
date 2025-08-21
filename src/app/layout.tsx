@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter, DM_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import { ToastProvider } from '@/components/ui/toast'
@@ -37,6 +37,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/logo.svg', type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512.png', sizes: '512x512', type: 'image/png' },
+    ],
+  },
+  manifest: '/site.webmanifest',
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -45,6 +56,12 @@ export const metadata: Metadata = {
     description: 'We help startups and growing businesses in the US and Canada build, fix, and launch software that works — fast. Now offering creative services for branding and marketing.',
     siteName: 'BrightCode',
     images: [
+      {
+        url: '/icon-512.png',
+        width: 512,
+        height: 512,
+        alt: 'BrightCode Logo',
+      },
       {
         url: '/og/home.jpg',
         width: 1200,
@@ -57,7 +74,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'BrightCode - Software that ships. Teams that care.',
     description: 'We help startups and growing businesses in the US and Canada build, fix, and launch software that works — fast. Now offering creative services for branding and marketing.',
-    images: ['/og/home.jpg'],
+    images: ['/icon-512.png'],
   },
   robots: {
     index: true,
@@ -70,6 +87,10 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+}
+
+export const viewport: Viewport = {
+  themeColor: '#0f172a',
 }
 
 export default function RootLayout({
@@ -101,7 +122,7 @@ export default function RootLayout({
                   '@type': 'Organization',
                   name: 'BrightCode',
                   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://brightcode.com',
-                  logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://brightcode.com'}/logo.png`,
+                  logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://brightcode.com'}/logo-wordmark.svg`,
                 },
                 {
                   '@type': 'LocalBusiness',

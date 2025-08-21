@@ -132,7 +132,7 @@ export default function USPricingPage() {
                       
                       <Button className="w-full" asChild>
                         <Link href={`/contact?country=us&service=${item.id}`}>
-                          Get Started
+                          Book a Free 20-Min Strategy Call
                         </Link>
                       </Button>
                     </CardContent>
@@ -178,7 +178,7 @@ export default function USPricingPage() {
                       
                       <Button className="w-full bg-purple-600 hover:bg-purple-700" asChild>
                         <Link href={`/contact?country=us&service=creative&type=${item.id}`}>
-                          Get Started
+                          Book a Free 20-Min Strategy Call
                         </Link>
                       </Button>
                     </CardContent>
