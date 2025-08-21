@@ -17,4 +17,25 @@ export const offices = {
   },
 };
 
+export const officeLocations = [
+  {
+    city: 'Los Angeles',
+    label: 'Los Angeles Office',
+    street: '1234 Sunset Blvd, Suite 500',
+    locality: 'Los Angeles, CA 90012',
+    country: 'United States',
+    mapQuery: encodeURIComponent('1234 Sunset Blvd, Los Angeles, CA 90012'),
+    notes: 'Placeholder coworking address. By appointment only.'
+  },
+  {
+    city: 'Toronto',
+    label: 'Toronto Office',
+    street: '123 King St W, Suite 2100',
+    locality: 'Toronto, ON M5H 1A1',
+    country: 'Canada',
+    mapQuery: encodeURIComponent('123 King St W, Toronto, ON M5H 1A1'),
+    notes: 'Placeholder coworking address. By appointment only.'
+  }
+];
+
 export type Office = typeof offices.us; 

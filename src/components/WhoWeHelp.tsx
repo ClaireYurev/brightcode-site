@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { CheckCircle, ArrowRight } from 'lucide-react'
+import { StockImage } from '@/components/StockImage'
 import { verticals, type Vertical } from '@/data/verticals'
 
 interface WhoWeHelpProps {
@@ -41,6 +42,9 @@ export function WhoWeHelp({ limit }: WhoWeHelpProps) {
                   {vertical.tagline}
                 </CardDescription>
               </CardHeader>
+              <div className="px-6 pb-6">
+                <StockImage k={`verticals.${vertical.slug}`} width={1200} height={720} className="rounded-lg overflow-hidden" />
+              </div>
               <CardContent>
                 <ul className="space-y-2 mb-6">
                   {vertical.bullets.slice(0, 3).map((bullet, index) => (

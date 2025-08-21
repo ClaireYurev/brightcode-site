@@ -10,7 +10,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { StockImage } from '@/components/StockImage'
+import { InlineMap } from '@/components/InlineMap'
 import { services, creativeServices } from '@/data/services'
+import { officeLocations } from '@/data/offices'
 import { CheckCircle, Send, AlertCircle, Calendar } from 'lucide-react'
 import { submitContact } from '@/lib/actions'
 import { getCalendlyUrl } from '@/lib/region'
@@ -109,6 +112,13 @@ export default function ContactPage() {
               Tell us about your project and we'll get back to you within 24 hours with a personalized proposal.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Contact Banner */}
+      <section className="py-12">
+        <div className="container">
+          <StockImage k="contact.banner" width={1600} height={600} className="rounded-xl overflow-hidden mb-6" />
         </div>
       </section>
 
@@ -346,6 +356,33 @@ export default function ContactPage() {
                 </form>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Office Locations */}
+      <section className="py-20 bg-gray-50">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">
+              Our Offices
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Visit us in Los Angeles or Toronto, or schedule a remote consultation.
+            </p>
+          </div>
+          
+          <div className="grid gap-8 md:grid-cols-2">
+            {officeLocations.map(o => (
+              <div key={o.label} className="space-y-4">
+                <h3 className="text-lg font-semibold">{o.label}</h3>
+                <p>{o.street}</p>
+                <p>{o.locality}</p>
+                <p>{o.country}</p>
+                {o.notes && <p className="text-sm text-muted-foreground">{o.notes}</p>}
+                <InlineMap q={o.mapQuery} title={o.label} />
+              </div>
+            ))}
           </div>
         </div>
       </section>

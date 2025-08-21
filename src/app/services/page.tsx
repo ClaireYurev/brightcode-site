@@ -8,6 +8,7 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { services, creativeServices } from '@/data/services'
 import { RelatedVerticals } from '@/components/RelatedVerticals'
+import { StockImage } from '@/components/StockImage'
 import { Code, Wrench, Plug, Palette, Brush, Type, Megaphone, CheckCircle, ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -18,6 +19,14 @@ export const metadata: Metadata = {
     description: 'Custom development, bug fixes, integrations, design, and creative services. We help businesses build, fix, and launch software that works, plus create stunning visual content.',
   },
 }
+
+const keyByServiceTitle: Record<string,string> = {
+  'API Integrations & Automations': 'services.integrations',
+  'Custom Dashboards': 'services.dashboards',
+  'Websites & Portals': 'services.websites',
+  'Data Pipelines & Reporting': 'services.pipelines',
+  'Maintenance & Support': 'services.support',
+};
 
 export default function ServicesPage() {
   return (
@@ -81,6 +90,9 @@ export default function ServicesPage() {
                         <CardTitle className="text-3xl mb-4">{service.title}</CardTitle>
                         <CardDescription className="text-lg">{service.description}</CardDescription>
                       </CardHeader>
+                      <div className="px-6 pb-6">
+                        <StockImage k={keyByServiceTitle[service.title]} width={1200} height={720} className="rounded-lg overflow-hidden" />
+                      </div>
                       <CardContent>
                         <div className="space-y-4">
                           <h4 className="font-semibold text-gray-900">What we deliver:</h4>

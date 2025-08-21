@@ -92,14 +92,47 @@ export default function RootLayout({
         />
         <script
           type="application/ld+json"
+          suppressHydrationWarning
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(usBusinessSchema),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(caBusinessSchema),
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [
+                {
+                  '@type': 'Organization',
+                  name: 'BrightCode',
+                  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://brightcode.com',
+                  logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://brightcode.com'}/logo.png`,
+                },
+                {
+                  '@type': 'LocalBusiness',
+                  name: 'BrightCode — Los Angeles',
+                  url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://brightcode.com'}/us`,
+                  address: {
+                    '@type': 'PostalAddress',
+                    streetAddress: '1234 Sunset Blvd, Suite 500',
+                    addressLocality: 'Los Angeles',
+                    addressRegion: 'CA',
+                    postalCode: '90012',
+                    addressCountry: 'US'
+                  },
+                  areaServed: ['US']
+                },
+                {
+                  '@type': 'LocalBusiness',
+                  name: 'BrightCode — Toronto',
+                  url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://brightcode.com'}/ca`,
+                  address: {
+                    '@type': 'PostalAddress',
+                    streetAddress: '123 King St W, Suite 2100',
+                    addressLocality: 'Toronto',
+                    addressRegion: 'ON',
+                    postalCode: 'M5H 1A1',
+                    addressCountry: 'CA'
+                  },
+                  areaServed: ['CA']
+                }
+              ]
+            }),
           }}
         />
       </head>

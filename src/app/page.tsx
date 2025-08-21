@@ -7,6 +7,7 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { WhoWeHelp } from '@/components/WhoWeHelp'
 import { TestimonialsStrip } from '@/components/TestimonialsStrip'
+import { StockImage } from '@/components/StockImage'
 import { services } from '@/data/services'
 import { offices } from '@/data/offices'
 import { Code, Wrench, Plug, Palette, CheckCircle, Star, Users, Zap, Brush } from 'lucide-react'
@@ -74,6 +75,13 @@ export default function HomePage() {
               </Button>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Hero Image */}
+      <section className="py-12">
+        <div className="container">
+          <StockImage k="hero" width={1200} height={800} priority className="rounded-xl mx-auto" />
         </div>
       </section>
 

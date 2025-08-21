@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge'
 import { CheckCircle, ArrowRight, Calendar } from 'lucide-react'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { StockImage } from '@/components/StockImage'
 import { verticals, verticalsMap, type Vertical } from '@/data/verticals'
 import { services } from '@/data/services'
 import { getCalendlyUrl } from '@/lib/region'
@@ -107,6 +108,13 @@ export default function VerticalPage({ params }: VerticalPageProps) {
               {vertical.summary}
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Hero Image */}
+      <section className="py-12">
+        <div className="container">
+          <StockImage k={`verticals.${vertical.slug}`} width={1200} height={720} className="rounded-lg overflow-hidden" />
         </div>
       </section>
 
