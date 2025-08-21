@@ -81,11 +81,23 @@ export function Footer() {
 
         <Separator className="my-8" />
 
+        {/* Trust Strip */}
+        <div className="py-4 border-t border-b">
+          <div className="text-center">
+            <p className="text-sm text-muted-foreground">
+              U.S.–Canada binational team • Founder‑led • Transparent pricing
+            </p>
+          </div>
+        </div>
+
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="flex items-center space-x-6 text-sm text-muted-foreground">
             <Link href="/services" className="hover:text-foreground transition-colors">
               Services
+            </Link>
+            <Link href="/verticals" className="hover:text-foreground transition-colors">
+              Who We Help
             </Link>
             <Link href="/work" className="hover:text-foreground transition-colors">
               Work

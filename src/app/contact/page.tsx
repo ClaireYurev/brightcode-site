@@ -11,8 +11,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { services, creativeServices } from '@/data/services'
-import { CheckCircle, Send, AlertCircle } from 'lucide-react'
+import { CheckCircle, Send, AlertCircle, Calendar } from 'lucide-react'
 import { submitContact } from '@/lib/actions'
+import { getCalendlyUrl } from '@/lib/region'
 
 export default function ContactPage() {
   const searchParams = useSearchParams()
@@ -21,9 +22,10 @@ export default function ContactPage() {
   const [errorMessage, setErrorMessage] = useState('')
   const [serviceType, setServiceType] = useState(searchParams.get('service') || '')
   
-  const defaultCountry = searchParams.get('country') || ''
+  const defaultCountry = searchParams.get('country') || searchParams.get('region') || ''
   const defaultService = searchParams.get('service') || ''
   const defaultCreativeType = searchParams.get('type') || ''
+  const defaultVertical = searchParams.get('vertical') || ''
   
   const budgetRanges = [
     { value: 'under-5k', label: 'Under $5,000' },
@@ -231,7 +233,7 @@ export default function ContactPage() {
                     <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                       Specific Service Interest
                     </label>
-                    <Select name="service" defaultValue={defaultCreativeType || defaultService}>
+                    <Select name="service" defaultValue={defaultCreativeType || defaultService || defaultVertical}>
                       <SelectTrigger>
                         <SelectValue placeholder="Select specific service" />
                       </SelectTrigger>
@@ -323,6 +325,24 @@ export default function ContactPage() {
                       </>
                     )}
                   </Button>
+                  
+                  <div className="text-center">
+                    <p className="text-sm text-muted-foreground mb-4">Or book a consultation directly:</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <Button variant="outline" size="lg" asChild>
+                        <a href={getCalendlyUrl("us")} target="_blank" rel="noopener noreferrer">
+                          <Calendar className="w-4 h-4 mr-2" />
+                          Book US consult
+                        </a>
+                      </Button>
+                      <Button variant="outline" size="lg" asChild>
+                        <a href={getCalendlyUrl("ca")} target="_blank" rel="noopener noreferrer">
+                          <Calendar className="w-4 h-4 mr-2" />
+                          Book Canada consult
+                        </a>
+                      </Button>
+                    </div>
+                  </div>
                 </form>
               </CardContent>
             </Card>

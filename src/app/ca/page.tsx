@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { WhoWeHelp } from '@/components/WhoWeHelp'
 import { services } from '@/data/services'
 import { offices } from '@/data/offices'
 import { Code, Wrench, Plug, Palette, CheckCircle, Star, Users, Zap, DollarSign } from 'lucide-react'
@@ -130,6 +131,9 @@ export default function CAPage() {
           </div>
         </div>
       </section>
+
+      {/* Who We Help Section */}
+      <WhoWeHelp limit={3} />
 
       {/* Why BrightCode Canada Section */}
       <section className="py-20 bg-gray-50">

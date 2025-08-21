@@ -15,6 +15,7 @@ export function Header() {
   const currentCountry = getCountryFromPath(pathname)
 
   const navigation = [
+    { name: 'Who We Help', href: '/verticals' },
     { name: 'Work', href: '/work' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },

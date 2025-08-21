@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, DM_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import { ToastProvider } from '@/components/ui/toast'
-import { getOrganizationSchema } from '@/lib/seo/jsonld'
+import { getOrganizationSchema, getLocalBusinessSchema } from '@/lib/seo/jsonld'
 
 import '../styles/globals.css'
 
@@ -78,6 +78,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   const organizationSchema = getOrganizationSchema()
+  const usBusinessSchema = getLocalBusinessSchema('us')
+  const caBusinessSchema = getLocalBusinessSchema('ca')
   
   return (
     <html lang="en" className={`${inter.variable} ${dmSans.variable}`}>
@@ -86,6 +88,18 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(usBusinessSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(caBusinessSchema),
           }}
         />
       </head>

@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { WhoWeHelp } from '@/components/WhoWeHelp'
 import { services } from '@/data/services'
 import { offices } from '@/data/offices'
 import { Code, Wrench, Plug, Palette, CheckCircle, Star, Users, Zap, Brush } from 'lucide-react'
@@ -58,7 +59,7 @@ export default function HomePage() {
               <span className="text-brand-600">Teams that care.</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              We help startups and growing businesses in the US and Canada build, fix, and launch software that works — fast. Now offering creative services for branding and marketing.
+              Binational U.S.–Canada development for startups and SMBs. We build, fix, and launch software—fast.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
@@ -162,6 +163,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Who We Help Section */}
+      <WhoWeHelp limit={5} />
 
       {/* Why BrightCode Section */}
       <section className="py-20 bg-gray-50">

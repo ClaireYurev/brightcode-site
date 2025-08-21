@@ -187,6 +187,31 @@ export default function USPricingPage() {
         </div>
       </section>
 
+      {/* Cross-links to Verticals */}
+      <section className="py-16 bg-gray-50 border-t">
+        <div className="container">
+          <div className="max-w-4xl mx-auto text-center">
+            <h3 className="text-2xl font-display font-bold text-gray-900 mb-4">
+              Serving both the U.S. and Canada
+            </h3>
+            <p className="text-lg text-gray-600 mb-6">
+              See our specialized vertical solutions for cross-border businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="outline" asChild>
+                <Link href="/verticals">View All Verticals</Link>
+              </Button>
+              <Button variant="outline" asChild>
+                <Link href="/verticals/cross-border-accounting-tax">Accounting & Tax</Link>
+              </Button>
+              <Button variant="outline" asChild>
+                <Link href="/verticals/cross-border-ecommerce">E-Commerce</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Additional Info */}
       <section className="py-20 bg-gray-50">
         <div className="container">
