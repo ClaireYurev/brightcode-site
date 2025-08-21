@@ -53,16 +53,19 @@ export default function CAPage() {
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="secondary" className="mb-4">Canada Office</Badge>
             <h1 className="text-5xl md:text-6xl font-display font-bold text-gray-900 mb-6">
-              Software that works.
+              Software that ships.
               <br />
-              <span className="text-brand-600">Partners that care.</span>
+              <span className="text-brand-600">Teams that care.</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              We help businesses launch software and creative that move the needle. With teams in the U.S. and Canada, we combine local expertise with cross-border reach.
+              We help startups and growing businesses build, fix, and launch software that's fast, reliable, and intuitive by design. We also offer creative services for branding and marketing.
+            </p>
+            <p className="text-sm text-muted-foreground mb-8">
+              Based in the U.S. and Canada.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
-                <Link href="/contact?country=ca" aria-label="Book a Free Consultation (Canada)">Book a Free Consultation</Link>
+                <Link href="/contact?country=ca" aria-label="Get a Free Consultation (Canada)">Get a Free Consultation</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
                 <Link href="/pricing/ca">See Canadian Pricing</Link>
@@ -77,7 +80,7 @@ export default function CAPage() {
         <div className="container">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">
-              Based in Toronto, ON • {offices.ca.phone} • {offices.ca.email}
+              Service area: Greater Toronto Area, ON (remote across Canada) • {offices.ca.phone} • {offices.ca.email}
             </p>
             <div className="flex items-center space-x-2">
               <Badge variant="outline">CAD Pricing</Badge>
@@ -169,10 +172,10 @@ export default function CAPage() {
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">
-              Our Canada office
+              Our Canada service area
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Located in the heart of Toronto.
+              Serving the Greater Toronto Area and remote clients across Canada.
             </p>
           </div>
           

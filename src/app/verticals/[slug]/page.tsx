@@ -217,13 +217,13 @@ export default function VerticalPage({ params }: VerticalPageProps) {
                     <Button size="lg" asChild className="w-full">
                       <a href={getCalendlyUrl("us")} target="_blank" rel="noopener noreferrer">
                         <Calendar className="w-4 h-4 mr-2" />
-                        Book US consult
+                        Get US consult
                       </a>
                     </Button>
                     <Button size="lg" variant="outline" asChild className="w-full">
                       <a href={getCalendlyUrl("ca")} target="_blank" rel="noopener noreferrer">
                         <Calendar className="w-4 h-4 mr-2" />
-                        Book Canada consult
+                        Get Canada consult
                       </a>
                     </Button>
                   </div>

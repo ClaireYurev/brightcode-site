@@ -10,10 +10,10 @@ export interface OrganizationSchema {
   foundingDate: string
   address: {
     '@type': string
-    streetAddress: string
+    streetAddress?: string
     addressLocality: string
     addressRegion: string
-    postalCode: string
+    postalCode?: string
     addressCountry: string
   }
   contactPoint: {
@@ -33,10 +33,10 @@ export interface LocalBusinessSchema {
   email: string
   address: {
     '@type': string
-    streetAddress: string
+    streetAddress?: string
     addressLocality: string
     addressRegion: string
-    postalCode: string
+    postalCode?: string
     addressCountry: string
   }
   geo: {
@@ -97,10 +97,8 @@ export function getOrganizationSchema(): OrganizationSchema {
     foundingDate: '2019',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: offices.us.address,
-      addressLocality: 'Long Beach',
+      addressLocality: 'Orange County',
       addressRegion: 'CA',
-      postalCode: '90802',
       addressCountry: 'US'
     },
     contactPoint: [
@@ -127,16 +125,14 @@ export function getLocalBusinessSchema(country: 'us' | 'ca'): LocalBusinessSchem
   return {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: `BrightCode ${isUS ? 'US' : 'Canada'}`,
-    url: 'https://brightcode.com',
+    name: `BrightCode — ${isUS ? 'U.S.' : 'Canada'}`,
+    url: isUS ? 'https://brightcode.com/us' : 'https://brightcode.com/ca',
     telephone: office.phone,
     email: office.email,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: office.address,
-      addressLocality: isUS ? 'Long Beach' : 'Toronto',
+      addressLocality: isUS ? 'Orange County' : 'Toronto',
       addressRegion: isUS ? 'CA' : 'ON',
-      postalCode: isUS ? '90802' : 'M5V 3A8',
       addressCountry: isUS ? 'US' : 'CA'
     },
     geo: {
